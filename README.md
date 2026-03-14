@@ -1,5 +1,1 @@
 # devtools-maven
-
-hi
-
-oo
