@@ -22,7 +22,7 @@ jeka app: install repo=https://github.com/djeang/devtools-maven
 
 Or as Bundled application
 ```shell
-jeka app: install repo=devtools-maven@djeang runtime=bundled
+jeka app: install repo=https://github.com/djeang/devtools-maven runtime=bundled
 ```
 
 
