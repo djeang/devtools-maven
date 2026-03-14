@@ -15,17 +15,16 @@ A collection of developer utilities in a single desktop application.
 
 ## Installation
 
-```
-./mvnw clean package
+Install as command
+```shell
+jeka app: install repo=devtools-maven 
 ```
 
-* Build a native application using [GluonFX Maven plugin](https://github.com/gluonhq/gluonfx-maven-plugin).
-  [GraalVM](https://www.graalvm.org/) installation is required. After obtaining the GraalVM distribution, the
-  environment variable `GRAALVM_HOME` should be set to point to it.
+Or as Bundled application
+```shell
+jeka app: install repo=devtools-maven runtime=bundled
+```
 
-```
-./mvnw clean gluonfx:build
-```
 
 * Download a build from [releases](https://github.com/reugn/dev-tools/releases).
 
