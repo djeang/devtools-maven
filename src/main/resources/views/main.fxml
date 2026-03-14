@@ -1,0 +1,60 @@
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<VBox fx:controller="com.github.reugn.devtools.controllers.MainController"
+      xmlns:fx="http://javafx.com/fxml" alignment="TOP_CENTER">
+
+    <MenuBar fx:id="menuBar">
+        <menus>
+            <Menu text="File">
+                <items>
+                    <MenuItem text="Open" disable="true"/>
+                    <SeparatorMenuItem/>
+                    <MenuItem text="Exit" onAction="#handleExitAction" accelerator="Ctrl+Shift+E"/>
+                </items>
+            </Menu>
+
+            <Menu text="View">
+                <items>
+                    <fx:define>
+                        <ToggleGroup fx:id="themeToggleGroup"/>
+                    </fx:define>
+                    <Menu text="Theme">
+                        <items>
+                            <RadioMenuItem text="Dark" selected="true" toggleGroup="$themeToggleGroup"
+                                           onAction="#handleDarkThemeAction" accelerator="Ctrl+Shift+D"/>
+                            <RadioMenuItem text="Light" toggleGroup="$themeToggleGroup"
+                                           onAction="#handleLightThemeAction" accelerator="Ctrl+Shift+L"/>
+                        </items>
+                    </Menu>
+                </items>
+            </Menu>
+
+            <Menu text="Tools" fx:id="toolsMenu">
+                <items>
+                    <MenuItem text="Json Editor" onAction="#handleMenuAction" userData="json_editor.fxml"
+                              disable="true"/>
+                    <MenuItem text="Image Editor" onAction="#handleMenuAction" userData="image_editor.fxml"/>
+                    <MenuItem text="Rest API" onAction="#handleMenuAction" userData="rest_api.fxml"/>
+                    <MenuItem text="JWT Decoder" onAction="#handleMenuAction" userData="jwt_decoder.fxml"/>
+                    <MenuItem text="Generator" onAction="#handleMenuAction" userData="generator.fxml"/>
+                    <MenuItem text="Hash Calculator" onAction="#handleMenuAction" userData="hash_calculator.fxml"/>
+                    <MenuItem text="Epoch Converter" onAction="#handleMenuAction" userData="epoch_converter.fxml"/>
+                    <MenuItem text="Regex Tester" onAction="#handleMenuAction" userData="regex.fxml"/>
+                    <MenuItem text="ASCII Art" onAction="#handleMenuAction" userData="ascii_graphics.fxml"/>
+                    <MenuItem text="Log Generator" onAction="#handleMenuAction" userData="log_generator.fxml"/>
+                </items>
+            </Menu>
+
+            <Menu text="Help">
+                <items>
+                    <MenuItem text="Search" disable="true"/>
+                    <SeparatorMenuItem/>
+                    <MenuItem text="About" onAction="#handleAboutAction" accelerator="Ctrl+A"/>
+                </items>
+            </Menu>
+        </menus>
+    </MenuBar>
+
+    <BorderPane fx:id="mainPane"/>
+</VBox>
