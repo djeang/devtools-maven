@@ -17,12 +17,12 @@ A collection of developer utilities in a single desktop application.
 
 Install as command
 ```shell
-jeka app: install repo=devtools-maven 
+jeka app: install repo=https://github.com/djeang/devtools-maven 
 ```
 
 Or as Bundled application
 ```shell
-jeka app: install repo=devtools-maven runtime=bundled
+jeka app: install repo=devtools-maven@djeang runtime=bundled
 ```
 
 
