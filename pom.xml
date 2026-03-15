@@ -204,7 +204,7 @@
             <id>jpackage-linux</id>
             <activation>
                 <os>
-                    <family>unix</family>
+                    <name>Linux</name>
                 </os>
             </activation>
             <properties>
