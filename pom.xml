@@ -145,7 +145,7 @@
                         <artifactId>jpackage-maven-plugin</artifactId>
                         <version>${jpackage-maven-plugin.version}</version>
                         <configuration>
-                            <name>DevelopmentTools</name>
+                            <name>devtools</name>
                             <type>${jpackage.type}</type>
                             <mainJar>${project.build.finalName}.jar</mainJar>
                             <mainClass>com.github.reugn.devtools.Main</mainClass>
@@ -154,7 +154,7 @@
                             <vendor>com.github.reugn</vendor>
                             <copyright>Copyright (c) 2026 com.github.reugn</copyright>
                             <appVersion>1.0.0</appVersion>
-                            <icon>icons/icon.icns</icon>
+                            <icon>${jpackage.icon}</icon>
                             <javaOptions>
                                 <option>--add-opens=javafx.graphics/javafx.scene=ALL-UNNAMED</option>
                                 <option>--add-opens=javafx.controls/com.sun.javafx.scene.control.behavior=ALL-UNNAMED</option>
