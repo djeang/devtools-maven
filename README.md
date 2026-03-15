@@ -15,22 +15,15 @@ A collection of developer utilities in a single desktop application.
 
 ## Installation
 
-Install as command
+Install as a command:
 ```shell
 jeka app: install repo=https://github.com/djeang/devtools-maven 
 ```
 
-Or as Bundled application
+Or as a desktop application:
 ```shell
 jeka app: install repo=https://github.com/djeang/devtools-maven runtime=bundled
 ```
-
-
-* Download a build from [releases](https://github.com/reugn/dev-tools/releases).
-
-## Prerequisites
-
-* Java 11 or later
 
 ## Getting Started
 
