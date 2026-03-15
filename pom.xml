@@ -32,6 +32,8 @@
         <guice.version>5.1.0</guice.version>
         <commons-lang3.version>3.17.0</commons-lang3.version>
         <java-jwt.version>4.4.0</java-jwt.version>
+        <jpackage.type>app-image</jpackage.type>
+        <jpackage.icon>icons/icon.ico</jpackage.icon>
     </properties>
 
     <build>
@@ -144,7 +146,7 @@
                         <version>${jpackage-maven-plugin.version}</version>
                         <configuration>
                             <name>DevelopmentTools</name>
-                            <type>DMG</type>
+                            <type>${jpackage.type}</type>
                             <mainJar>${project.build.finalName}.jar</mainJar>
                             <mainClass>com.github.reugn.devtools.Main</mainClass>
                             <input>${project.build.directory}/libs</input>
@@ -173,6 +175,42 @@
                     </plugin>
                 </plugins>
             </build>
+        </profile>
+        <profile>
+            <id>jpackage-windows</id>
+            <activation>
+                <os>
+                    <family>Windows</family>
+                </os>
+            </activation>
+            <properties>
+                <jpackage.type>APP_IMAGE</jpackage.type>
+                <jpackage.icon>icons/icon.ico</jpackage.icon>
+            </properties>
+        </profile>
+        <profile>
+            <id>jpackage-macos</id>
+            <activation>
+                <os>
+                    <family>mac</family>
+                </os>
+            </activation>
+            <properties>
+                <jpackage.type>DMG</jpackage.type>
+                <jpackage.icon>icons/icon.icns</jpackage.icon>
+            </properties>
+        </profile>
+        <profile>
+            <id>jpackage-linux</id>
+            <activation>
+                <os>
+                    <family>unix</family>
+                </os>
+            </activation>
+            <properties>
+                <jpackage.type>DEB</jpackage.type>
+                <jpackage.icon>icons/icon.png</jpackage.icon>
+            </properties>
         </profile>
     </profiles>
 
@@ -243,4 +281,7 @@
             <version>${java-jwt.version}</version>
         </dependency>
     </dependencies>
+
+
+
 </project>
